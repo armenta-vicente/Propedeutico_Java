@@ -1,0 +1,11 @@
+public class Ejercicio04 {
+    public static void main(String args[]){
+        //declaramos 2 variables y se inicializan
+        int a = 10;
+        int b = 10;
+
+        //las imprimmimos con operadores que modifican su valor, y a la vez usamos operador de suma
+        System.out.println(a++ + ++a);
+        System.out.println(b++ + b++);
+    }
+}

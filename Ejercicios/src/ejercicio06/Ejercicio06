@@ -1,0 +1,12 @@
+public class Ejercicio06 {
+    public static void main(String args[]){
+        //declaramos 3 variables y se inicializan
+        int a = 10;
+        int b = 5;
+        int c = 20;
+
+        //las imprimmimos con operadores que comparan
+        System.out.println(a<b && a<c);
+        System.out.println(a<b & a<c);
+    }
+}
