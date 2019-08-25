@@ -1,24 +1,17 @@
 package com.company;
 
-import java.io.*;
+import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-        String input = "";
-        String inputLowerCase = "";
-        BufferedReader ob = new BufferedReader(new InputStreamReader(System.in));
+        String input;
+        String inputLowerCase;
+        Scanner sc = new Scanner(System.in);
 
         System.out.print("Ingresa un dato a evaluar -> ");
-
-        try {
-            input = ob.readLine();
-            inputLowerCase = input.toLowerCase();
-        }
-        catch (IOException e) {
-            System.out.println("No ingresaste ningun dato");
-            System.exit(0);
-        }
+        input = sc.nextLine();
+        inputLowerCase = input.toLowerCase();
 
         if(inputLowerCase.length() == 0){
             System.out.println("No ingresaste ningun dato");
@@ -58,13 +51,7 @@ public class Main {
                     break;
                 }
                 default: {
-                    try {
-                        Integer.parseInt(inputLowerCase);
-                        System.out.println("El dato que ingresaste '" + input + "', es numerico");
-                    }
-                    catch (NumberFormatException e) {
-                        System.out.println("El dato que ingresaste '" + input + "', es un caracter.");
-                    }
+                    System.out.println("El dato que ingresaste '" + input + "', es un caracter.");
                 }
             }
         }
